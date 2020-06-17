@@ -1,0 +1,156 @@
+@import '../../../../stylesheets/base/index';
+
+page {
+  background-color: #fff;
+
+  .pet-fosterDetail {
+    &-navBar {
+      .nav-bar-title {
+        color: #000;
+        font-size: 14PX !important;
+      }
+    }
+
+    &-swiper {
+      width: 100%;
+      height: 360PX;
+
+      &-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-situation {
+      padding: 0 17PX;
+
+      &-info {
+        margin-top: 16PX;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      &-avatar {
+        width: 64PX;
+        height: 64PX;
+      }
+
+      &-content {
+        & {
+          margin-left: 14PX;
+        }
+
+        &-title {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 18PX;
+          font-weight: 500;
+          color: @base-symbol-important-color;
+        }
+
+        &-detail {
+          color: @base-symbol-tag-color;
+          font-size: 15PX;
+        }
+
+        &-attrName {
+          display: inline-block;
+          padding-right: 8PX;
+          margin-right: 8PX;
+          line-height: 1;
+          border-right: 1px solid @base-symbol-tag-color;
+        }
+
+        &-desc {
+          display: block;
+          font-size: 14PX;
+          margin-top: 3PX;
+          color: @base-symbol-tag-color;
+        }
+      }
+    }
+
+    &-service {
+      margin-top: 16PX;
+      padding: 18PX 17PX;
+      border-top: 1px solid @base-symbol-border-color;
+      border-bottom: 1px solid @base-symbol-border-color;
+
+      &-main {
+        &-title {
+          @base-foster-detail-title();
+          display: flex;
+          align-items: center;
+
+          &-desc {
+            @base-desc-style();
+            background-color: @base-symbol-point-light-color;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 2PX 4PX;
+            margin: 0 4PX;
+          }
+        }
+
+        &-list {
+          &-item {
+            margin-top: 12PX;
+            font-size: 16PX;
+            color: @base-symbol-tag-color;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            &-info {
+              &-skuOptions {
+                &:first-child {
+                  margin-top: 0;
+                }
+
+                color: @base-main-color;
+                margin-top: 12PX;
+                font-weight: 500;
+                font-size: 16PX;
+
+                &-symbol {
+                  font-size: 12PX;
+                  margin-right: 4PX;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-other {
+        margin-top: 18PX;
+      }
+    }
+
+    &-information {
+      padding: 18PX 17PX;
+      border-bottom: 1px solid @base-symbol-border-color;
+
+      &:last-of-type {
+        border-bottom: 0;
+        padding-bottom: 64PX;
+      }
+
+      &-title {
+        @base-foster-detail-title();
+      }
+
+      &-attrValue {
+        display: block;
+        margin-top: 12PX;
+        font-size: 16PX;
+        line-height: .9;
+        color: @base-symbol-tag-color;
+      }
+    }
+
+    &-placeOrder {
+      @base-nextStep-button();
+    }
+  }
+}

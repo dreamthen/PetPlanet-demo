@@ -1,0 +1,59 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+}
+
+.pet-selfObd {
+  &-tabs {
+    height: 100%;
+
+    .at-tabs__header {
+      background-color: @base-symbol-shallow-color;
+    }
+
+    .at-tabs__item {
+      padding: 30px;
+      color: @base-symbol-tag-color;
+      font-size: 15PX;
+      font-weight: 400;
+    }
+
+    .at-tabs__underline {
+      display: none;
+    }
+
+    .at-tabs__item--active {
+      background-color: white;
+      color: #F14F46;
+    }
+
+    .at-tabs__item-underline {
+      left: 0;
+      top: 20%;
+      right: auto;
+      transition: none;
+      height: 60%;
+      width: 6px;
+      background-color: #F14F46;
+    }
+
+    &-list {
+      &-item {
+        padding: 15PX 15PX 18PX;
+        font-size: 15PX;
+        font-weight: 400;
+        color: @base-symbol-important-color;
+
+        &:after {
+          border-bottom: none;
+        }
+
+        .at-list__item-extra {
+          width: auto;
+          flex: none;
+        }
+      }
+    }
+  }
+}

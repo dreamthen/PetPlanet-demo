@@ -1,0 +1,112 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+  background-color: @base-symbol-backgroundColor;
+
+  .pet {
+    height: 100%;
+    overflow: auto;
+
+    &-iPhoneXM-navBar {
+      padding-top: 76px;
+    }
+
+    &-iPhoneX-navBar {
+      padding-top: 82px;
+    }
+
+    &-iPhone-navBar {
+      padding-top: 36px;
+    }
+
+    &-iPhone5-navBar {
+      padding-top: 52px;
+    }
+
+    &-Android-navBar {
+      padding-top: 40px;
+    }
+
+    &-find {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      overflow: auto;
+    }
+
+    &-business {
+      position: relative;
+      z-index: 1;
+      height: calc(100% - 92PX);
+
+      @base-symbol-loading();
+    }
+
+    &-topic {
+      &-flowList {
+        height: 100%;
+        overflow: auto;
+
+        &-header {
+          padding: 0 20PX;
+          height: 180PX;
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          justify-content: center;
+
+          &-avatar {
+            width: 72PX;
+            height: 72PX;
+            line-height: 72PX;
+          }
+
+          &-title {
+            margin-top: 12PX;
+            font-size: 20PX;
+            font-weight: bold;
+            letter-spacing: 1PX;
+            color: #fff;
+          }
+        }
+      }
+
+      &-empty {
+        visibility: hidden;
+      }
+
+      &-deal {
+        position: fixed;
+        background-color: transparent;
+        width: 46PX;
+        height: 46PX;
+        padding-left: 0;
+        border: none;
+        right: 50px;
+        bottom: 136px;
+        z-index: 801;
+
+        &-adaption {
+          bottom: 172px;
+        }
+
+        &:after {
+          border: none;
+        }
+
+        &-add {
+          border-radius: 50%;
+          width: 100%;
+          min-width: auto;
+          height: 100%;
+          font-size: 50px;
+          background-color: @base-main-color;
+          box-shadow: 0 2PX 4PX 0 @base-main-color;
+          border: none;
+          line-height: 41PX;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import '../../../../../stylesheets/base/index';
+
+page {
+  background-color: @base-symbol-shallow-color;
+
+  .pet-diseaseDetail {
+    &-navBar {
+      .nav-bar-title {
+        color: #000;
+        font-size: 14PX !important;
+      }
+    }
+
+    @base-symbol-loading();
+
+    &-container {
+      &:before {
+        content: '';
+        display: table-cell;
+      }
+    }
+
+    &-illness {
+      display: block;
+      margin: 7PX 17PX;
+      border-left: 4PX solid @base-main-color;
+      font-size: 18PX;
+      font-weight: 500;
+      color: @base-symbol-important-color;
+    }
+
+    &-propose {
+      @base-desc-style();
+
+      .at-noticebar {
+        &__content {
+          &-text {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    &-operation {
+      background: #fff;
+      padding: 17PX;
+      margin-top: 10PX;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &-title {
+        letter-spacing: 1PX;
+        font-size: 17PX;
+        font-weight: 500;
+        color: @base-symbol-important-color;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          border-radius: 50%;
+          width: 7PX;
+          height: 7PX;
+          background-color: @base-main-color;
+          vertical-align: middle;
+          margin-right: 6PX;
+        }
+      }
+
+      &-content {
+        display: block;
+        margin-top: 14PX;
+        font-size: 16PX;
+        font-weight: 400;
+        color: @base-symbol-tag-color;
+      }
+    }
+  }
+}

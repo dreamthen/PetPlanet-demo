@@ -1,0 +1,230 @@
+@import '../../../../../stylesheets/base/index';
+
+page {
+  background-color: #fff;
+  height: 100%;
+
+  .at-message {
+    padding: 22px 10px;
+  }
+
+  .pet-detail {
+    &-iPhoneXM-navBar {
+      padding-top: 92px;
+    }
+
+    &-iPhoneX-navBar {
+      padding-top: 106px;
+    }
+
+    &-iPhone-navBar {
+      padding-top: 60px;
+    }
+
+    &-iPhone5-navBar {
+      padding-top: 76px;
+    }
+
+    &-Android-navBar {
+      padding-top: 64px;
+    }
+  }
+
+  .pet-placeOrder {
+    height: 100%;
+    overflow-y: auto;
+
+    &-navBar {
+      .nav-bar-title {
+        color: #000;
+        font-size: 14PX !important;
+      }
+    }
+
+    @base-symbol-loading();
+
+    &-area {
+      padding: 12PX 17PX;
+      border-bottom: 1PX solid @base-symbol-border-color;
+
+      &-title {
+        @base-foster-placeOrder-title();
+
+        &-desc {
+          @base-desc-style();
+        }
+      }
+
+      &-content {
+        @base-foster-placeOrder-service();
+      }
+
+      &-service {
+        &-item {
+          @base-foster-placeOrder-service();
+          margin-top: 12PX;
+
+          &-title {
+            width: 80PX;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &-info {
+            color: @base-main-color;
+
+            &-symbol {
+              font-size: 10PX;
+              margin-right: 2PX;
+            }
+          }
+
+          &-number {
+            margin-right: 6PX;
+            @base-symbol-inputNumber();
+          }
+
+          &-numberCounter {
+            color: @base-main-color;
+            display: block;
+          }
+
+          &-switch {
+            margin: 0;
+            padding: 8px 0;
+          }
+        }
+      }
+
+      &-picker {
+        display: inline-block;
+        margin: 0 2PX;
+      }
+
+      &-contact,
+      &-contactPhone {
+        margin-left: 0;
+        padding: 0;
+
+        input {
+          font-size: 14PX;
+          color: @base-symbol-tag-color;
+        }
+
+        &:after {
+          border: none;
+        }
+      }
+
+      &-description {
+        display: block;
+      }
+
+      &-textarea {
+        border: none;
+        padding: 0;
+        margin-top: 16PX;
+
+        .at-textarea {
+          &__textarea {
+            font-size: 14PX;
+            color: @base-symbol-tag-color;
+          }
+        }
+      }
+
+      &-agreement {
+        display: inline-block;
+
+        &-wrap {
+          margin-top: 8PX;
+
+        }
+
+        &.at-checkbox {
+          &:before,
+          &:after {
+            border: none
+          }
+
+          .at-checkbox {
+            &__option {
+              padding: 0;
+
+              &-wrap {
+                padding: 0;
+              }
+
+              &-cnt {
+                align-items: center;
+              }
+
+              &--selected {
+                .at-checkbox__icon-cnt {
+                  background-color: @base-main-color;
+                }
+              }
+            }
+
+            &__icon {
+              &-cnt {
+                margin-right: 12px;
+                margin-top: 0;
+                border-color: @base-symbol-tag-color;
+              }
+            }
+
+            &__title {
+              font-size: 14PX;
+              color: @base-symbol-tag-color;
+            }
+          }
+        }
+      }
+
+      &-agreementDetail {
+        display: inline-block;
+        font-size: 14PX;
+        color: @base-main-color;
+        margin-top: 12PX;
+      }
+    }
+
+    &-desc {
+      border: none;
+    }
+
+    &-account {
+      width: 100%;
+      margin-top: 18PX;
+      height: 46PX;
+      overflow: hidden;
+
+      &-total,
+      &-ordered {
+        border-radius: 0;
+        display: inline-block;
+        @base-symbol-half-button();
+      }
+
+      &-total {
+
+        &-float,
+        &-symbol {
+          font-size: 12PX;
+        }
+
+        &-symbol {
+          margin: 0 2PX;
+        }
+      }
+
+      &-ordered {
+        background-color: @base-main-color;
+        border-color: @base-main-color;
+      }
+    }
+  }
+}

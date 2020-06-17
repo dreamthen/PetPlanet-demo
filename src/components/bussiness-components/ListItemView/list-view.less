@@ -1,0 +1,29 @@
+@import '../../../stylesheets/base/index';
+
+.list-item {
+  display: flex;
+  border-bottom: 1px solid @base-symbol-border-color;
+  align-items: center;
+  box-sizing: border-box;
+
+  &-container {
+    &-avatar {
+    }
+  }
+
+  &-title {
+    width: calc(100% - 72PX);
+    padding-left: 13PX;
+    font-size: 16PX;
+    font-weight: 500;
+    color: @base-symbol-important-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-desc {
+    font-weight: 500;
+    font-size: 15PX;
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../../../stylesheets/base/index';
+
+page {
+  .pet-flowTopics {
+    &-list {
+      &-item {
+        padding: 17PX;
+
+        .list {
+          &-item {
+            &-title {
+              width: calc(100% - 88PX);
+              font-size: 17PX;
+            }
+          }
+        }
+      }
+    }
+
+    &-loadMore {
+      height: 60PX;
+
+      .at-loading__ring {
+        border-color: @base-main-color transparent transparent transparent;
+      }
+    }
+  }
+}

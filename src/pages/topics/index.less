@@ -1,0 +1,135 @@
+@import '../../stylesheets/base/index';
+
+
+page {
+  height: 100%;
+  background-color: #fff;
+
+  .pet {
+    height: 100%;
+    overflow: auto;
+
+    &-find {
+      position: relative;
+      z-index: 1;
+      height: calc(100% - 54PX);
+      overflow: auto;
+
+      &-adaption {
+        height: calc(100% - 72PX);
+      }
+    }
+
+    &-business {
+      position: relative;
+      z-index: 1;
+      height: calc(100% - 92PX);
+
+      @base-symbol-loading();
+    }
+
+    &-topic {
+      box-sizing: border-box;
+      width: 100%;
+      overflow-x: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #fff;
+      padding: 10PX 17PX;
+      white-space: nowrap;
+
+      &-container {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+
+      &-item {
+        width: 120PX;
+        min-width: 120PX;
+        height: 125PX;
+        font-size: 14PX;
+        background-color: @base-symbol-backgroundColor;
+        color: rgba(0, 0, 0, .9);
+        margin-right: 10PX;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8PX;
+        padding: 0 8PX;
+        box-sizing: border-box;
+
+        &-logo {
+          margin-bottom: 6PX;
+        }
+
+        &-content {
+          width: 105PX;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          text-align: center;
+        }
+
+        &-active {
+          color: #fb2a5d;
+
+          image {
+            border: 1px solid #fb2a5d;
+          }
+        }
+      }
+
+      &-flowList {
+        height: 100%;
+        overflow: auto;
+      }
+
+      &-empty {
+        visibility: hidden;
+      }
+
+      &-deal {
+        position: fixed;
+        background-color: transparent;
+        width: 46PX;
+        height: 46PX;
+        padding-left: 0;
+        border: none;
+        right: 50px;
+        bottom: 136px;
+        z-index: 801;
+
+        &-adaption {
+          bottom: 172px;
+        }
+
+        &:after {
+          border: none;
+        }
+
+        &-add {
+          border-radius: 50%;
+          width: 100%;
+          min-width: auto;
+          height: 100%;
+          font-size: 50px;
+          background-color: @base-main-color;
+          box-shadow: 0 2PX 4PX 0 @base-main-color;
+          border: none;
+          line-height: 41PX;
+        }
+      }
+    }
+
+    &-tabBar {
+      height: 54PX;
+      padding: 0;
+
+      &-adaption {
+        height: 72PX;
+      }
+    }
+  }
+}

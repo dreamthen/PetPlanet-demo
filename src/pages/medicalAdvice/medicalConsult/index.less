@@ -1,0 +1,112 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+
+  .pet-consult {
+    padding: 0 17PX;
+    height: calc(100% - 48PX);
+    overflow: auto;
+    box-sizing: border-box;
+
+    @base-symbol-loading();
+
+    .panel_title {
+      position: relative;
+      margin: 17PX 0 14PX;
+      line-height: 1.5;
+      font-size: 17PX;
+      font-weight: 500;
+      border: none;
+      padding: 0;
+      color: @base-symbol-important-color;
+    }
+
+    .radio {
+
+      &-sub-title {
+        box-sizing: border-box;
+        font-size: 17PX;
+        font-weight: 400;
+      }
+
+      &-item {
+        &-content {
+          padding: 10PX 17PX;
+          box-sizing: border-box;
+          background-color: @base-symbol-shallow-color;
+          border-radius: 4PX;
+          color: @base-symbol-important-color;
+
+          &.checked {
+            background-color: @base-main-color;
+            color: #fff;
+          }
+        }
+
+        &:first-child {
+          .radio-item-content {
+            margin-left: 0;
+            margin-right: 4PX;
+          }
+        }
+      }
+    }
+
+    &-description {
+      margin-top: 23PX;
+    }
+
+    &-content {
+      &-textarea {
+        background-color: @base-symbol-shallow-color;
+        padding: 13PX;
+        border: none;
+        border-radius: 4PX;
+
+        .at-textarea {
+          &__textarea {
+            font-weight: 400;
+            color: @base-symbol-color;
+          }
+
+          &__counter {
+            font-size: 11PX;
+            font-weight: 400;
+            color: #C2C2C2;
+          }
+        }
+      }
+    }
+
+    .next-step {
+      @base-nextStep-button();
+    }
+
+    &-imagepicker {
+      margin-top: 23PX;
+
+      .at-image-picker {
+        &__flex-box {
+          padding: 0;
+        }
+
+        &__flex-item {
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+
+        &__choose-btn {
+          background: #F7F7F7;
+          border-radius: 3PX;
+          border: none;
+
+          .add-bar {
+            background-color: @base-symbol-color;
+          }
+        }
+      }
+    }
+  }
+}

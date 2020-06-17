@@ -1,0 +1,342 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  .detail {
+    &-swiper {
+      height: 320PX;
+
+      &-item {
+        width: 100%;
+        position: relative;
+
+        image {
+          width: 100%;
+          height: 100%;
+        }
+
+        &-current {
+          position: absolute;
+          z-index: 2;
+          bottom: 8PX;
+          right: 8PX;
+          background-color: rgba(0, 0, 0, .4);
+          color: #fff;
+          font-size: 12PX;
+          padding: 2PX 12PX;
+          border-radius: 12PX;
+        }
+      }
+    }
+
+    &-skuOptions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 17PX;
+      margin-top: 17PX;
+
+      &-discPrice {
+        font-size: 20PX;
+        color: @base-main-color;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        &-symbol {
+          font-size: 15PX;
+          margin-right: 2PX;
+        }
+      }
+
+      &-salePrice {
+        font-size: 14PX;
+        color: @base-symbol-color;
+        margin-left: 12PX;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 1PX;
+
+        .iconfont {
+          margin-right: 1PX;
+
+          &-petPlanet-tmall {
+            position: relative;
+            bottom: 0;
+          }
+        }
+
+        &-real {
+          text-decoration: line-through;
+        }
+
+        &-symbol {
+          margin-left: 2PX;
+        }
+      }
+
+      &-sales {
+        font-size: 13PX;
+        color: @base-symbol-color;
+      }
+    }
+
+    &-goods {
+      margin-top: 17PX;
+
+      &-goodsName {
+        padding: 0 17PX;
+        font-size: 20PX;
+        font-weight: 500;
+        color: @base-symbol-important-color;
+      }
+
+      &-goodsDesc {
+        padding: 0 17PX;
+        font-size: 16PX;
+        color: @base-symbol-important-color;
+        margin-top: 4PX;
+      }
+
+      &-service {
+        padding: 0 17PX;
+        margin-top: 12PX;
+        font-size: 13PX;
+        color: @base-symbol-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-container {
+          display: flex;
+          align-items: center;
+        }
+
+        &-content {
+          display: flex;
+          align-items: center;
+          margin-left: 12PX;
+
+          &-item {
+            margin-left: 8PX;
+            color: @base-symbol-important-color;
+            display: flex;
+            align-items: center;
+
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:before {
+              content: '';
+              width: 4PX;
+              height: 4PX;
+              background-color: @base-symbol-color;
+              border-radius: 50%;
+              display: block;
+              margin-right: 4PX;
+            }
+          }
+        }
+
+        &-desc {
+          color: @base-symbol-important-color;
+
+          &-symbol {
+            color: @base-symbol-color;
+          }
+        }
+      }
+
+      &-goodsDetail {
+        font-size: 16PX;
+        font-weight: 500;
+        color: @base-symbol-important-color;
+        margin: 17PX 0 0;
+        padding-bottom: 46PX;
+
+        image {
+          width: 100%;
+          height: auto;
+          display: block;
+
+          &:first-child {
+            margin-top: 12PX;
+          }
+        }
+
+        &-title {
+          padding: 0 17PX 17PX 17PX;
+        }
+      }
+    }
+
+    &-serviceOrder {
+      position: fixed;
+      width: 100%;
+      margin-top: 16PX;
+      height: 46PX;
+      overflow: hidden;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      box-sizing: border-box;
+      box-shadow: 0 0 5PX #eee;
+
+      &-button {
+        border-radius: 0;
+        display: inline-block;
+        height: 46PX;
+        @base-symbol-half-button();
+      }
+
+      &-share {
+        width: 28%;
+        background-color: #fff;
+        border-color: #fff;
+        color: @base-symbol-important-color;
+
+        .iconfont {
+          margin-right: 4PX;
+          position: relative;
+          top: 1PX;
+        }
+      }
+
+      &-placeOrder {
+        width: 72%;
+        background-color: @base-main-color;
+        border-color: @base-main-color;
+      }
+    }
+
+    &-float {
+      &-layout {
+        @base-symbol-floatLayout();
+
+        &-content {
+          font-size: 14PX;
+
+          &-item {
+            margin-top: 8PX;
+            display: flex;
+            align-items: flex-start;
+
+            &:before {
+              @base-symbol-description-point();
+            }
+          }
+        }
+      }
+    }
+
+    &-sku-choose {
+      @base-symbol-floatLayout();
+
+      .at-float-layout {
+        &__container {
+          height: 950px;
+
+          .layout {
+            &-body {
+              height: 950px;
+
+              &__content {
+                height: 950px;
+              }
+
+            }
+          }
+        }
+      }
+
+      .layout-body {
+        padding: 0 !important;
+      }
+
+      &-info {
+        box-sizing: border-box;
+        padding: 12PX 16PX 16PX 16PX;
+        height: 250px;
+
+        &-image {
+          margin-right: 28PX;
+          width: 200px;
+          height: 200px;
+        }
+
+        &-price {
+          color: @base-main-color;
+          margin-top: 45px;
+          font-weight: 500;
+          font-size: 36px;
+        }
+
+        &-stock {
+          color: @base-symbol-tag-color;
+          font-size: 24px;
+        }
+      }
+
+      &-divider {
+        padding: 0PX 16PX 0PX 16PX;
+
+        &.shadow {
+          margin-top: 36PX;
+
+        }
+      }
+
+      &-option {
+        height: 560px;
+        padding: 4PX;
+        box-sizing: border-box;
+        padding: 0PX 16PX 0PX 16PX;
+        margin: 0 0 10PX 0;
+
+        &-title {
+          color: @base-symbol-important-color;
+          margin-top: 12px;
+        }
+
+        &-wrap {
+          margin: 24px 0;
+        }
+
+        &-item {
+          font-size: 14PX;
+          padding: 4PX 18PX;
+          background-color: @base-symbol-light-grey-color;
+          border-radius: 5PX;
+
+          &.checked {
+            border: 1px solid @base-main-color;
+            color: white;
+            background-color: @base-main-color;
+          }
+        }
+      }
+
+      &-count {
+        padding: 18PX 0 32PX 0;
+
+        &-inputNumber {
+          margin-right: 6PX;
+          @base-symbol-inputNumber();
+        }
+      }
+
+      &-btn {
+        box-sizing: border-box;
+        background-color: @base-main-color;
+        width: 100%;
+        height: 48PX;
+        color: white;
+        line-height: 51PX;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+      }
+    }
+  }
+}

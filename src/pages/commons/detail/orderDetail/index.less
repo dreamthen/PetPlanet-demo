@@ -1,0 +1,118 @@
+@import '../../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+
+  .orderDetail {
+    height: 100%;
+    background-color: @base-symbol-backgroundColor;
+    overflow: auto;
+
+    @base-symbol-loading();
+
+    @base-symbol-orderStatus();
+
+    &-status {
+      background-color: #fff;
+      border-bottom: none;
+    }
+
+    &-service {
+      padding: 17PX;
+      background-color: #fff;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      border-top: 1PX solid @base-symbol-border-color;
+
+      &:first-child {
+        border: none;
+      }
+    }
+
+    &-express {
+      &-info {
+        margin-left: 8PX;
+        width: calc(100% - 40PX);
+        font-size: 14PX;
+        color: @base-symbol-point-color;
+      }
+
+      &-time {
+        margin-top: 2PX;
+        color: @base-symbol-color;
+        font-size: 13PX;
+      }
+
+      &-companyNumberDetail {
+        font-size: 13PX;
+        color: #666;
+        margin-top: 2PX;
+      }
+    }
+
+    &-address {
+      border-radius: 4PX;
+      display: flex;
+      align-items: center;
+
+      &-content {
+        width: calc(100% - 76PX);
+        margin-left: 12PX;
+        color: @base-symbol-important-color;
+      }
+
+      @base-symbol-address();
+    }
+
+    &-detail {
+      margin-top: 8PX;
+      border: none;
+      @base-symbol-order-goodsInfo();
+      @base-symbol-share();
+
+      &-share {
+        margin-top: 0;
+        justify-content: flex-end;
+        padding: 8PX 17PX;
+      }
+    }
+
+    &-total {
+      border: none;
+      padding: 4PX 17PX 8PX;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      font-size: 16PX;
+      color: @base-symbol-important-color;
+
+      &-price {
+        color: @base-main-color;
+
+        &-symbol,
+        &-float {
+          font-size: 14PX;
+        }
+
+        &-symbol {
+          margin: 0 2PX 0 4PX;
+        }
+      }
+    }
+
+    &-info {
+      border: none;
+      margin-top: 12PX;
+      display: block;
+      @base-symbol-orderDetail-info();
+      padding-bottom: 64PX;
+
+      &-medicalAdvice {
+        height: calc(100% - 320PX);
+      }
+    }
+
+    @base-symbol-serviceOrder();
+  }
+}

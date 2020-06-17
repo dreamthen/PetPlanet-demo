@@ -1,0 +1,214 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  background-color: #fff;
+
+  .pet-detail {
+    &-activity-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .at-activity-indicator__body {
+        margin-bottom: 32px;
+      }
+    }
+
+    &-header {
+      background-color: #fff;
+      padding: 17PX 17PX 0;
+      box-sizing: border-box;
+
+      &-container {
+        color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        align-items: center;
+
+        .pet-detail-header-title {
+          font-size: 18PX;
+          font-weight: 500;
+          color: @base-symbol-important-color;
+          margin-left: 8PX;
+        }
+      }
+
+      &-tags {
+        position: relative;
+        @base-card-list-tags();
+        bottom: 2PX;
+      }
+
+      &-collection {
+        line-height: 60px;
+        text-align: right;
+
+        &-button {
+
+          &-collected {
+            border: none !important;
+            background-color: transparent !important;
+            color: #ccc !important;
+          }
+
+          font-size: 24px;
+          min-width: 64px;
+          height: 54px;
+          line-height: 52px;
+          margin-top: 3px;
+          border-radius: 80px;
+          color: #fb2a5d;
+          border: 1px solid #eee;
+          padding: 0 25px;
+        }
+      }
+    }
+
+    &-content {
+      width: 100%;
+      position: relative;
+      padding: 10PX 17PX 0;
+      box-sizing: border-box;
+      background-color: #fff;
+
+      &-price {
+        font-size: 20PX;
+        color: @base-main-color;
+        font-weight: 500;
+
+        &-symbol {
+          font-size: 15PX;
+          margin-right: 6PX;
+        }
+      }
+
+      &-like {
+        position: relative;
+        font-size: 13PX;
+        font-weight: 400;
+        color: @base-symbol-color;
+        margin-left: 24PX;
+        bottom: 2PX;
+
+        &-count {
+          color: @base-symbol-important-color;
+        }
+      }
+
+      &-area {
+        display: flex;
+        align-items: center;
+        font-size: 13PX;
+        font-weight: 400;
+        margin-top: 6PX;
+        color: @base-symbol-important-color;
+
+        image {
+          width: 11PX;
+          margin-right: 3PX;
+        }
+      }
+
+      &-operation {
+        position: absolute;
+        display: flex;
+        top: 0;
+        right: 0;
+      }
+
+      &-share {
+        &-button {
+          border: none;
+          height: 88px;
+
+          .iconfont-petPlanet-share {
+            font-weight: 500;
+          }
+        }
+
+        &-title {
+          line-height: 0;
+          margin-top: 8px;
+          font-size: 12PX;
+          color: @base-symbol-tag-color;
+        }
+      }
+
+      &-collection {
+        &-button {
+          border: none;
+          height: 88px;
+
+          .iconfont-petPlanet-collect {
+            font-weight: 500;
+          }
+        }
+
+        &-title {
+          line-height: 0;
+          margin-top: 8px;
+          font-size: 12PX;
+          color: @base-symbol-tag-color;
+        }
+      }
+    }
+
+    &-personal {
+      padding: 17PX;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14PX;
+      color: #333;
+      border-top: 1PX solid @base-symbol-border-color;
+      border-bottom: 1PX solid @base-symbol-border-color;
+
+      &-user {
+        display: flex;
+        align-items: center;
+        font-size: 16PX;
+        font-weight: 500;
+        color: @base-symbol-important-color;
+
+        &-avatar {
+          width: 42PX;
+          height: 42PX;
+          line-height: 42PX;
+          margin-right: 12PX;
+        }
+      }
+
+      &-contactInfo {
+        display: block;
+        font-size: 16PX;
+        font-weight: 400;
+        color: @base-symbol-important-color;
+      }
+    }
+
+    &-info {
+      padding: 20PX 17PX 15PX;
+      background-color: #fff;
+
+      &-content {
+        display: block;
+        font-size: 17PX;
+        font-weight: 400;
+        color: @base-symbol-important-color;
+      }
+    }
+
+    &-images {
+      width: 100%;
+
+      &-item {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

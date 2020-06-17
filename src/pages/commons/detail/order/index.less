@@ -1,0 +1,124 @@
+@import '../../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+
+  .order {
+    height: 100%;
+    background-color: @base-symbol-backgroundColor;
+    overflow: auto;
+    padding: 0 17PX;
+
+    @base-symbol-loading();
+
+    &-service {
+      padding: 17PX;
+      background-color: #fff;
+      border-radius: 4PX;
+    }
+
+    &-address {
+      margin-top: 12PX;
+      border-radius: 4PX;
+      display: flex;
+      align-items: center;
+
+      &-content {
+        width: calc(100% - 76PX);
+        margin-left: 12PX;
+        color: @base-symbol-important-color;
+      }
+
+      @base-symbol-address();
+
+      &-redirectTo {
+        width: 10PX;
+        height: auto;
+        margin-left: 8PX;
+        transform: rotate(180deg);
+      }
+    }
+
+    &-detail {
+      margin-top: 17PX;
+      @base-symbol-order-goodsInfo();
+    }
+
+    &-goodsInfo,
+    &-remark {
+      @base-order-info();
+    }
+
+    &-goodsInfo {
+      &-content {
+        &-number {
+          margin-left: 8PX;
+          @base-symbol-inputNumber();
+        }
+      }
+    }
+
+    &-remark {
+      &-content {
+        &-input {
+          margin: 0;
+          box-sizing: border-box;
+          border: none;
+          padding: 0 8PX;
+
+          &:after {
+            border: none;
+          }
+
+          .at-input {
+            &__input {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &-total {
+      width: 100%;
+      padding: 8PX 17PX;
+      position: fixed;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      height: 110px;
+      line-height: 110px;
+      box-sizing: border-box;
+
+      &-info {
+        margin-right: 12PX;
+        color: @base-symbol-important-color;
+
+        &-price {
+          color: @base-main-color;
+          font-size: 18PX;
+        }
+
+        &-float,
+        &-symbol {
+          font-size: 14PX;
+        }
+
+        &-symbol {
+          margin-right: 2PX;
+        }
+      }
+
+      &-submit {
+        background-color: @base-main-color;
+        height: 94px;
+        line-height: 94px;
+        border-color: @base-main-color;
+        border-radius: 47px;
+      }
+    }
+  }
+}

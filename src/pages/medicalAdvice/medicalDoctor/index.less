@@ -1,0 +1,145 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+  background-color: @base-symbol-shallow-color;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .panel_title {
+    position: relative;
+    margin-top: 22PX;
+    line-height: 1.5;
+    font-size: 16PX;
+    font-weight: 700;
+    color: @base-symbol-important-color;
+    border: none;
+    padding-left: 0;
+
+    .sub-title {
+      line-height: 1.5;
+    }
+  }
+
+  .pet-medicalDoctor {
+    @base-symbol-loading();
+  }
+
+  .radio-container {
+    height: 100%;
+    padding: 0 17PX;
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+    label:first-child {
+      .radio-item {
+        margin-top: 0;
+      }
+    }
+
+    label:last-child {
+      .radio-item {
+        padding-bottom: 64PX;
+      }
+    }
+  }
+
+  .radio-item {
+    margin-top: 12PX;
+
+    &-content {
+      width: 100%;
+      height: 84PX;
+      box-sizing: border-box;
+      padding: 10PX 16PX;
+      background-color: #fff;
+      border-radius: 8PX;
+      margin-top: 17PX;
+
+      &-avatar {
+        margin: 0 14PX 0 0;
+        width: 52PX;
+        height: 52PX;
+      }
+
+      &-select {
+        margin-top: 0;
+      }
+
+      &.checked {
+        background-color: #eeeeee;
+      }
+    }
+  }
+
+
+  .number {
+    font-size: 20PX;
+    font-weight: 500;
+    color: @base-symbol-point-color;
+
+    &-symbol {
+      font-size: 13PX;
+      font-weight: 500;
+      color: @base-symbol-point-color;
+      margin-right: 4PX;
+    }
+  }
+
+  .title {
+    margin-bottom: 5px;
+    font-size: 16PX;
+    font-weight: 500;
+    color: @base-symbol-important-color;
+  }
+
+  .full-time-job-icon {
+    font-size: 12PX;
+    font-weight: 500;
+    color: @base-symbol-point-medical-color;
+    background-color: @base-symbol-point-medical-light-color;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 2PX 3PX;
+    margin: 0 4PX;
+    line-height: 14PX;
+    height: 14PX;
+  }
+
+  .full-time-font {
+    font-weight: 700;
+    color: @base-symbol-point-color;
+  }
+
+  .sub-title {
+    margin-top: 5PX;
+    font-size: 12PX;
+    font-weight: 400;
+    color: @base-symbol-color;
+
+    &-goodAt {
+      color: @base-symbol-tag-color;
+    }
+  }
+
+
+  .color-light-grey {
+    margin-top: 3PX;
+    font-size: 11PX;
+  }
+
+  .at-form:after {
+    border: none;
+  }
+
+  .next {
+    &-step {
+      @base-nextStep-button();
+    }
+  }
+}

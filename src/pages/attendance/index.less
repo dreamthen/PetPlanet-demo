@@ -1,0 +1,565 @@
+@import '../../stylesheets/base/index';
+
+page {
+  height: 100%;
+
+  .pet-attendance {
+
+    position: relative;
+    z-index: 1;
+    height: 100%;
+
+    &-noticeBar {
+      color: @base-symbol-point-color;
+      background-color: @base-symbol-point-backgroundColor;
+
+      .at-noticebar__content {
+        justify-content: center;
+      }
+    }
+
+    &-container {
+      z-index: 2;
+    }
+
+    &-alert {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 4;
+
+      &-avatar {
+        background-color: #fff;
+        margin-bottom: 8px;
+        box-shadow: none;
+      }
+
+      &-content {
+        font-size: 32px;
+        color: #999;
+        padding: 8px 48px 28px;
+      }
+
+      &-button {
+        height: 72px;
+        line-height: 70px;
+        background-color: @base-main-color;
+        border-color: @base-main-color;
+      }
+    }
+
+    &-header {
+      position: relative;
+      z-index: 3;
+
+      &-rules {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        font-size: 13PX;
+        z-index: 4;
+        background-color: @base-main-color;
+        color: #fff;
+        padding: 6PX 4PX 6PX 8PX;
+        border-bottom-left-radius: 16PX;
+        border-top-left-radius: 16PX;
+        line-height: .9;
+
+        .iconfont {
+          margin-right: 4PX;
+          font-weight: bolder;
+        }
+      }
+
+      &-swiper {
+        height: 200PX;
+
+        &-bg {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+
+      &-button {
+        width: 80PX;
+        height: 80PX;
+        line-height: 28PX;
+        position: absolute !important;
+        top: 50%;
+        left: 15%;
+        margin-top: -40PX;
+        border-radius: 50%;
+        background-color: #fff;
+        color: @base-main-color;
+        font-size: 16PX;
+        font-weight: bolder;
+        transition: all 0.6s ease-in-out 0s;
+        transform: scale(0.8);
+        border: 1PX solid #fff;
+
+        &-normal {
+          transition: all 0.6s ease-in-out 0s;
+          transform: scale(1);
+        }
+
+        &-enlarge {
+          transition: all 0.6s ease-in-out 0s;
+          transform: scale(1.1);
+        }
+
+        .pet-attendance-header-button-dayOfTotal {
+          font-size: 20PX;
+        }
+
+        .at-button__text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &.at-button--disabled {
+          opacity: 1;
+          color: #398ee2;
+        }
+      }
+    }
+
+    &-content {
+      padding: 0 15PX;
+
+      &-header {
+        position: relative;
+        z-index: 4;
+        color: #000;
+        font-size: 17PX;
+        background-color: #fff;
+        height: 108PX;
+        line-height: 36PX;
+        padding: 12PX 30PX 12PX 15PX;
+        border-radius: 8PX;
+        bottom: 20PX;
+        box-shadow: 0 0 2PX 0 rgba(0, 0, 0, .2);
+
+        text.pet-attendance-content-header-item {
+          color: @base-main-color;
+          font-weight: bolder;
+        }
+
+        &-tag {
+          background-color: transparent;
+          border: none;
+          color: #888;
+          padding: 0 8PX;
+        }
+
+        image.pet-attendance-content-header-icon {
+          width: 34PX;
+          height: auto;
+          line-height: 0;
+          float: left;
+          overflow: hidden;
+          margin-right: 6PX;
+        }
+
+        &-viewDetail {
+          position: absolute;
+          right: 20PX;
+          top: 50PX;
+          font-size: 14PX;
+          color: #888;
+
+          text.pet-attendance-content-header-viewDetail-icon {
+            position: relative;
+            bottom: 1PX;
+            transform: rotate(0deg);
+            transition: all .4s ease-in-out 0s;
+
+            &-active {
+              transform: rotate(180deg);
+            }
+          }
+        }
+
+        &-groupName {
+          width: 240PX;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-weight: bolder;
+          color: @base-main-color;
+          font-size: 18PX;
+        }
+      }
+
+      &-headerNoRadius {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &-accordion {
+        position: relative;
+        bottom: 20PX;
+        border-radius: 8PX;
+        box-shadow: 0 0 2PX 0 rgba(0, 0, 0, .2);
+        z-index: 4;
+
+        .at-accordion__header {
+          padding: 0;
+          min-height: auto;
+          height: 0;
+          overflow: hidden;
+        }
+
+        &-detail {
+          padding: 8PX 12PX;
+          line-height: 1.68;
+          font-size: 15PX;
+          color: #333;
+
+          text.pet-attendance-content-accordion-detail-todaySign {
+            font-weight: bolder;
+            color: @base-main-color;
+            margin: 4PX 0 2PX;
+          }
+
+          &-row {
+            margin: 0 16PX 0 0;
+          }
+
+          &-empty {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.4;
+
+            .petPlanetWebview-time {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+
+      &-accordionNoRadius {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    &-list {
+      position: relative;
+      z-index: 3;
+      bottom: 4PX;
+
+      text.pet-attendance-list-title {
+        margin: 4PX 15PX 8PX;
+        font-weight: bolder;
+        font-size: 16PX;
+      }
+
+      &-component {
+        padding: 8PX 15PX 0;
+        background-color: #fff;
+
+        &-container {
+
+          &:first-child {
+            .pet-attendance-list-component-container-header {
+              margin-top: 0;
+            }
+          }
+
+          &-header {
+            margin-top: 4PX;
+
+            text.pet-attendance-list-component-container-header-title {
+              position: relative;
+              font-size: 16PX;
+              color: @base-main-color;
+              font-weight: bolder;
+              display: inline-block;
+              bottom: 1PX;
+              padding-left: 10PX;
+            }
+          }
+
+          &-content {
+            margin-left: 24PX;
+            position: relative;
+
+            &-tail {
+              position: absolute;
+              left: -15PX;
+              top: 4PX;
+              width: 1PX;
+              height: ~'calc(100% - 40PX)';
+              padding: 30PX 0 4PX 0;
+              background-color: #ddd;
+
+              &-signed {
+                background-color: @base-main-color;
+              }
+            }
+
+            &-row {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              background-color: #fff;
+              padding: 8PX 0;
+              box-sizing: border-box;
+              border-bottom: 1PX solid #e0e0e0;
+              line-height: 1.45;
+              font-size: 15PX;
+              position: relative;
+
+              &-aside {
+                width: 108PX;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &-avatar {
+                  width: 40PX;
+                  height: 40PX;
+                  border-radius: 50%;
+                  margin-bottom: 4PX;
+                }
+
+                &-rank {
+                  color: rgba(0, 0, 0, .68);
+                  font-size: 12PX;
+
+                  &-val {
+                    color: @base-symbol-point-color;
+                    margin-left: 4PX;
+                    font-weight: bold;
+                    font-size: 13PX;
+                  }
+                }
+              }
+
+              &-message {
+                width: ~'calc(100% - 108PX)';
+
+                text.pet-attendance-list-component-container-content-row-message-item {
+                  margin-right: 12PX;
+
+                  &-val {
+                    color: @base-main-color;
+                    font-size: 15PX;
+                    font-weight: bold;
+                  }
+                }
+              }
+
+              &-signTime {
+                font-size: 12PX;
+                color: @base-redPacket-noReceive-color;
+                margin-top: 4PX;
+              }
+
+              .pet-attendance-list-component-container-content-row:before,
+              .pet-attendance-list-component-container-content-row:after {
+                content: '';
+                clear: both;
+                height: 0;
+                display: table-cell;
+                overflow: hidden;
+                visibility: hidden;
+              }
+
+              &-redPacket {
+                position: absolute;
+                top: 8PX;
+                right: 0;
+                z-index: 3;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+                image {
+                  width: 20PX;
+                  margin-right: 2PX;
+                }
+
+                &-detail {
+                  font-size: 12PX;
+
+                  &-noReceive {
+                    color: @base-redPacket-noReceive-color;
+                  }
+
+                  &-received {
+                    color: @base-symbol-redPacket-color;
+                    display: inline-block;
+                    width: 38PX;
+                    text-align: left;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &-noSignList {
+        width: 100%;
+        height: 360PX;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        color: #888;
+        font-size: 14PX;
+
+        .iconfont-petPlanet-empty {
+          display: inline-block;
+          color: rgba(0, 0, 0, .25);
+          margin-bottom: 4PX;
+        }
+      }
+    }
+
+    &-activity-indicator {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      .at-activity-indicator__body {
+        margin-bottom: 32px;
+      }
+    }
+
+    &-modal {
+      .at-modal {
+        &__content {
+          min-height: 80px;
+          text-align: center;
+        }
+      }
+
+      &-redPacket {
+        .at-modal {
+          &__container {
+            background-color: transparent;
+            width: 560px;
+            overflow: visible;
+          }
+
+          &__overlay {
+            background-color: rgba(255, 255, 255, .5);
+          }
+        }
+
+        &-image {
+          width: 100%;
+          height: auto;
+        }
+
+        &-close {
+          position: absolute;
+          width: 32PX;
+          bottom: -56PX;
+          left: 50%;
+          margin-left: -18PX;
+          z-index: 1001;
+        }
+      }
+
+      &-rule {
+        .at-modal {
+          &__content {
+            font-size: 14PX;
+            min-height: 46PX;
+          }
+        }
+
+        &-content {
+          display: flex;
+          align-items: flex-start;
+          line-height: 1.4;
+
+          &:before {
+            @base-symbol-description-point();
+          }
+        }
+      }
+
+      &-cancel {
+        .at-modal {
+          &__content {
+            min-height: 46PX;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &-fab {
+      display: flex;
+      position: fixed;
+      width: 100%;
+      bottom: 28px;
+      z-index: 5;
+      flex-flow: row nowrap;
+      //justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 92px;
+
+      .at-badge__dot {
+        right: 0;
+        top: 0;
+      }
+
+      .at-fab {
+        width: 268px;
+        height: 72px;
+        border-radius: 40px;
+
+        .pet-attendance-fab-inner {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          border-radius: inherit;
+
+          &-hypermarket-text {
+            background-color: #fff;
+            color: @base-main-color;
+            border: 1px solid #e0e0e0;
+          }
+
+          &-medicalAdvice-text {
+            display: flex;
+            align-items: center;
+            background-color: @base-main-color;
+            border: 1px solid @base-main-color;
+          }
+
+          &-icon {
+            width: 40px;
+            margin-right: 4PX;
+          }
+        }
+      }
+    }
+  }
+}

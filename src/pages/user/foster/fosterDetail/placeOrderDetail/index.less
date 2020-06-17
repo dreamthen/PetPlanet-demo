@@ -1,0 +1,239 @@
+@import '../../../../../stylesheets/base/index';
+
+page {
+  .pet-placeOrderDetail {
+
+    @base-symbol-loading();
+    @base-symbol-orderStatus();
+
+    &-statusPendingPayment {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-service {
+      padding: 18PX 17PX;
+      border-bottom: 1PX solid @base-symbol-border-color;
+
+      &-title {
+        @base-foster-placeOrder-title();
+      }
+    }
+
+    &-family,
+    &-service {
+      &-container {
+        margin-top: 18PX;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      &-content {
+        & {
+          margin-left: 14PX;
+          width: calc(100% - 78PX);
+        }
+
+
+        &-title {
+          display: block;
+          margin-bottom: 5px;
+          font-size: 15PX;
+          font-weight: 500;
+          color: @base-symbol-important-color;
+        }
+
+        &-detail {
+          color: @base-symbol-tag-color;
+          font-size: 12PX;
+        }
+
+        &-attrName {
+          display: inline-block;
+          padding-right: 8PX;
+          margin-right: 8PX;
+          line-height: 1;
+          border-right: 1px solid @base-symbol-tag-color;
+        }
+
+        &-spuAttributeValue {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 500px;
+        }
+
+
+        &-desc {
+          display: block;
+          font-size: 11PX;
+          margin-top: 3PX;
+          color: @base-symbol-tag-color;
+        }
+      }
+
+      &-info {
+        margin-top: 12PX;
+        font-size: 14PX;
+        color: @base-symbol-tag-color;
+
+        &-time {
+          display: block;
+          margin-top: 4PX;
+          font-size: 12PX;
+
+          &-detail {
+            color: @base-symbol-point-color;
+          }
+        }
+      }
+
+      &-phone {
+        margin-top: 24PX;
+
+        &-button {
+          @base-publish-button();
+
+          border-radius: 4PX;
+        }
+      }
+    }
+
+    &-service {
+      &-content {
+        &-desc {
+          font-size: 13PX;
+        }
+
+        &-time {
+          font-size: 12PX;
+          margin-top: 2PX;
+          color: @base-symbol-tag-color;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      &-fosterServiceList,
+      &-otherServiceList {
+        padding-top: 12PX;
+        margin-top: 12PX;
+        border-top: 1PX solid @base-symbol-border-color;
+
+        &-title {
+          font-size: 14PX;
+          color: @base-symbol-important-color;
+        }
+
+        &-item {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 8PX;
+          font-size: 13PX;
+          color: @base-symbol-tag-color;
+
+          &:first-child {
+            margin-top: 12PX;
+          }
+
+          &-name {
+            display: inline-block;
+            width: 72PX;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          &-number {
+          }
+
+          &-info {
+            font-weight: 500;
+            color: @base-main-color;
+
+            &-symbol {
+              font-size: 10PX;
+              margin-right: 2PX;
+            }
+          }
+        }
+      }
+
+      &-total {
+        padding-top: 12PX;
+        margin-top: 12PX;
+        text-align: right;
+        font-size: 14PX;
+        font-weight: 500;
+        color: @base-main-color;
+
+        &-symbol,
+        &-float {
+          font-size: 12PX;
+        }
+
+        &-symbol {
+          margin-right: 2PX;
+        }
+      }
+
+      &-user,
+      &-emUser {
+        &-info {
+          margin-top: 12PX;
+
+          &-title {
+            font-size: 14PX;
+            color: @base-symbol-important-color;
+            font-weight: 500;
+          }
+
+          &-content {
+            margin-top: 8PX;
+            font-size: 13PX;
+            color: @base-symbol-tag-color;
+            display: flex;
+
+            &-name {
+              display: inline-block;
+              width: 70PX;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              margin-right: 4PX;
+            }
+
+            &-phone {
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      &-placeOrderInfo {
+        &-info {
+          @base-symbol-orderDetail-info();
+        }
+      }
+    }
+
+    &-serviceOwner {
+      border-bottom: 0;
+      padding-bottom: 64PX;
+      font-size: 12PX;
+      color: @base-symbol-color;
+
+      &-item {
+        display: block;
+        margin-top: 4PX;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+
+    @base-symbol-serviceOrder();
+  }
+}

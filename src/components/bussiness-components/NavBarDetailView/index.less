@@ -1,0 +1,58 @@
+@import '../../../stylesheets/base/index';
+
+.pet-detail-navBar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: #fff;
+  z-index: 2;
+
+  &.pet-detail-iPhoneXM-navBar {
+    padding-top: 76px;
+  }
+
+  &.pet-detail-iPhoneX-navBar {
+    padding-top: 85px;
+  }
+
+  &.pet-detail-iPhone-navBar {
+    padding-top: 36px;
+  }
+
+  &.pet-detail-iPhone5-navBar {
+    padding-top: 52px;
+  }
+
+  &.pet-detail-Android-navBar {
+    padding-top: 40px;
+  }
+
+  .nav-bar {
+    padding: 12px 10px 12px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    font-size: 15PX;
+    font-weight: 500;
+    color: @base-symbol-important-color;
+  }
+
+  &-information {
+    &-back {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      cursor: pointer;
+      margin-left: 5PX;
+    }
+  }
+
+  &-image {
+    width: 9PX;
+    height: auto;
+  }
+}

@@ -1,0 +1,171 @@
+@import '../../../../stylesheets/base/index';
+
+page {
+  background-color: @base-symbol-shallow-color;
+
+  .pet-disease {
+    &-navBar {
+      .nav-bar-title {
+        color: #000;
+        font-size: 14PX !important;
+      }
+    }
+
+    @base-symbol-loading();
+
+    &-symptoms {
+      padding: 17PX;
+      background-color: #fff;
+
+      &-title {
+        &-content {
+          font-size: 17PX;
+          font-weight: 500;
+          color: @base-symbol-important-color;
+        }
+      }
+
+      &-tagList {
+        margin-top: 3PX;
+      }
+
+      &-tagItem {
+        margin-right: 6PX;
+        margin-top: 12PX;
+        padding: 8PX 16PX;
+        height: auto;
+        line-height: 1;
+        font-size: 15PX;
+        font-weight: 400;
+        color: @base-symbol-important-color;
+        background: @base-symbol-border-color;
+      }
+
+      .at-tag--active.at-tag--primary {
+        background-color: @base-main-color;
+        border-color: @base-main-color;
+      }
+    }
+
+    &-illness {
+      padding: 17PX;
+      background-color: #fff;
+      margin-top: 10PX;
+      box-sizing: border-box;
+
+      &-title {
+        &-content {
+          font-size: 17PX;
+          font-weight: 500;
+          color: @base-symbol-important-color;
+        }
+      }
+
+      &-list {
+        margin-top: 22PX;
+
+        &-item {
+          margin-top: 20PX;
+          background-color: #FFEEF1;
+          padding: 11PX 14PX;
+          border-radius: 8PX;
+
+          &:first-child {
+            margin: 0;
+          }
+
+          &-title {
+            font-size: 17PX;
+            font-weight: 400;
+            color: @base-symbol-important-color;
+            letter-spacing: 1PX;
+
+            &:before {
+              content: '';
+              display: inline-block;
+              border-radius: 50%;
+              width: 7PX;
+              height: 7PX;
+              background-color: @base-main-color;
+              vertical-align: middle;
+              margin-right: 6PX;
+            }
+          }
+
+          &-content {
+            display: block;
+            margin-top: 8PX;
+            font-size: 15PX;
+            font-weight: 400;
+            color: @base-symbol-important-color;
+
+            &-clamp {
+              width: 100%;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              word-wrap: break-word;
+              -webkit-line-clamp: 3;
+            }
+
+            &-expand {
+              color: @base-main-color;
+              margin-top: 6PX;
+              font-size: 15PX;
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      &-propose {
+        @base-desc-style();
+      }
+    }
+
+    &-empty {
+      height: 100%;
+      background-color: #fff;
+      text-align: center;
+
+      &:before {
+        content: '';
+        display: table-cell;
+      }
+
+      &-icon {
+        display: inline-block;
+      }
+
+      &-description {
+        margin: 10PX 0 0;
+        font-size: 12PX;
+        color: #888;
+      }
+    }
+
+    &-searchLoading {
+      position: relative;
+      height: 100%;
+      background-color: #fff;
+      text-align: center;
+      padding: 14PX 0;
+
+      &:before {
+        content: '';
+        display: table-cell;
+      }
+
+      &-icon {
+        display: inline-block;
+      }
+
+      &-description {
+        margin: 10PX 0 0;
+        font-size: 12PX;
+        color: #888;
+      }
+    }
+  }
+}

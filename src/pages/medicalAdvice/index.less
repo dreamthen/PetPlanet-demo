@@ -1,0 +1,187 @@
+page {
+  height: 100%;
+
+  .pet-tabBar {
+    height: 54PX;
+    padding: 0;
+
+    &-adaption {
+      height: 72PX;
+    }
+  }
+
+  .pet-medicalAdvice {
+    height: calc(100% - 54PX);
+    overflow-y: auto;
+
+    &-banner {
+      height: 125PX;
+
+      &-image {
+        width: 100%;
+        height: 125PX;
+      }
+    }
+
+    &-content {
+      padding: 0 15PX;
+
+      &-detail {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        color: #000;
+        font-size: 17PX;
+        background-color: #fff;
+        height: 80PX;
+        line-height: 36PX;
+        padding: 12PX 30PX 12PX 15PX;
+        border-radius: 8PX;
+        bottom: 20PX;
+        box-shadow: 0 0 20PX 0 rgba(105, 105, 105, 0.2);
+
+        &-main {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: center;
+          align-items: center;
+          height: 36PX;
+
+          .iconfont-petPlanet-imageText {
+            position: relative;
+            top: 4px;
+          }
+
+          &-txt {
+            margin-left: 20px;
+            font-size: 20PX;
+            font-weight: bold;
+          }
+        }
+
+        &-description {
+          font-size: 14PX;
+          line-height: 2.2;
+          color: #888;
+        }
+      }
+
+      &-attack {
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 16PX 12PX;
+        border-radius: 8PX;
+        background-color: rgb(247, 247, 247);
+
+        &-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+
+        &-icon {
+          font-weight: bolder;
+        }
+
+        &-main {
+          margin-left: 20px;
+          font-size: 16PX;
+
+          &-txt {
+            font-size: 18PX;
+          }
+
+          &-description {
+            font-size: 12PX;
+            color: #888;
+          }
+        }
+      }
+
+      &-consultingNews {
+        margin-top: 14PX;
+        position: relative;
+
+        &-title {
+          font-size: 15PX;
+          padding-left: 12PX;
+          border-left: 4PX solid rgb(57, 142, 226);
+        }
+
+        &-list {
+          &-item {
+
+            color: #888;
+            padding: 9.5PX 0;
+            box-sizing: border-box;
+
+            &-title {
+
+              font-size: 13PX;
+
+              &-cnsltArea {
+                color: #f2b757;
+                font-weight: bolder;
+              }
+            }
+
+            &-container {
+              .at-col-10 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+
+                .iconfont-petPlanet-point {
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  justify-content: center;
+                  align-items: center;
+                  height: 18px;
+                  width: 18px;
+                  border-radius: 50%;
+                  border: 3PX solid rgba(57, 142, 226, .4);
+                  margin-right: 6PX;
+                }
+              }
+            }
+
+            &-information {
+              font-size: 13PX;
+              color: #000;
+              margin-top: 8PX;
+              padding-left: 12PX;
+            }
+
+            &-txt {
+              min-width: 216PX;
+              display: inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+        }
+
+        &-shadow {
+          position: absolute;
+          width: 100%;
+          height: 258PX;
+          top: 0;
+          left: 0;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

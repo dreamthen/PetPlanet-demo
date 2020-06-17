@@ -1,0 +1,106 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+  overflow: auto;
+  background-color: @base-symbol-shallow-color;
+
+  .pet-foster {
+    &-activity-indicator {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .at-activity-indicator__body {
+        margin-bottom: 32px;
+      }
+    }
+
+    &-swiper {
+      width: 100%;
+      height: 125PX;
+
+      &-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-situation {
+      padding: 0 17PX;
+
+      &-item {
+        height: 84PX;
+        box-sizing: border-box;
+        padding: 10PX 16PX;
+        margin-top: 12PX;
+        border-radius: 8PX;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+
+        &-avatar {
+          width: 52PX;
+          height: 52PX;
+        }
+
+        &-content {
+          margin-left: 14PX;
+          flex: 1;
+
+          &-detail {
+            color: @base-symbol-tag-color;
+            font-size: 13PX;
+          }
+
+          &-attrName {
+            display: inline-block;
+            padding-right: 8PX;
+            margin-right: 8PX;
+            line-height: 1;
+            border-right: 1px solid @base-symbol-tag-color;
+          }
+
+          &-title {
+            margin-bottom: 5px;
+            font-size: 16PX;
+            font-weight: 500;
+            color: @base-symbol-important-color;
+          }
+
+          &-desc {
+            font-size: 12PX;
+            margin-top: 3PX;
+            color: @base-symbol-tag-color;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 192PX;
+          }
+        }
+
+        &-price {
+          text-align: right;
+          font-size: 20PX;
+          font-weight: 500;
+          color: @base-symbol-point-color;
+
+          &-symbol {
+            font-size: 13PX;
+            margin-right: 4PX;
+          }
+        }
+      }
+
+      &-loadMore {
+        height: 60PX;
+
+        .at-loading__ring {
+          border-color: @base-main-color transparent transparent transparent;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+@import '../../stylesheets/base/index';
+
+page {
+  height: 100%;
+
+  .pet-tabBar {
+    padding: 0;
+    height: 54PX;
+
+    &-adaption {
+      height: 72PX;
+    }
+  }
+
+  .pet-me {
+    height: 100%;
+    background-color: #f1f1f1;
+
+    &:before {
+      content: '';
+      display: table-cell;
+    }
+
+    &-item-icon {
+      width: 44px;
+      height: 100%;
+    }
+
+    &-item-icon-wrap {
+      text-align: left;
+      height: 100%;
+    }
+
+    &-information {
+      background-color: #fff;
+      box-sizing: border-box;
+
+      &-nowrap {
+        padding: 0 0 0 17PX;
+      }
+
+      &-margin {
+        margin-top: 10PX;
+      }
+
+      &-avatar {
+        width: 60PX;
+        height: 60PX;
+        line-height: 60PX;
+        margin-right: 17PX;
+      }
+
+      &-getPermission-button {
+        width: 100%;
+        background-color: transparent;
+        text-align: left;
+        padding: 24PX 17PX;
+        align-items: center;
+
+        &:before,
+        &:after {
+          border: none;
+        }
+      }
+
+      &-nickname,
+      .pet-me-information-nickname {
+        line-height: 160px;
+        font-size: 18PX;
+        font-weight: 400;
+        color: @base-symbol-important-color;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      &-info,
+      &-communication {
+        position: relative;
+        border-bottom: 1px solid @base-symbol-border-color;
+        height: 56PX;
+        line-height: 56PX;
+        font-size: 16PX;
+        font-weight: 400;
+        color: @base-symbol-important-color;
+
+        &-detail {
+          text-align: right;
+
+          &-button {
+            margin-right: 17PX;
+          }
+        }
+
+        .at-badge__dot {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+        }
+      }
+
+      &-contact {
+        height: 56PX;
+        line-height: 56PX;
+        font-size: 16PX;
+        font-weight: 400;
+        margin-top: 16px;
+        justify-content: flex-start;
+        background-color: #fff;
+        color: #000;
+        border: none;
+        outline: none;
+        padding: 0;
+
+        &-txt {
+          text-align: left;
+          color: @base-symbol-important-color;
+        }
+
+
+        .at-button__wxbutton {
+          text-align: left;
+        }
+
+        &::after {
+          border: none;
+        }
+
+        .iconfont-petPlanet-customerService {
+          margin-left: 4px;
+        }
+      }
+
+
+      &-detail {
+        position: relative;
+        text-align: right;
+        left: 9PX;
+
+        &-button {
+          height: 160px;
+          line-height: 160px;
+        }
+      }
+    }
+  }
+}

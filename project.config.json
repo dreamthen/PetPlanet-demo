@@ -1,0 +1,330 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "Pat-Planet",
+	"description": "For Pat-Planet",
+	"appid": "wxc8bccc0233cf1237",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"enhance": false,
+		"postcss": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"bundle": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "分享进入此页面",
+					"pathName": "pages/index/shareDetail/index",
+					"query": "id=157&page=index&nickName=汪奴5683&avatarUrl= https://api.csg.1jtec.club/tinyStatics/imgs/default-0.png",
+					"scene": 1044,
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "0OVRaQhyf4xX-Pv4LJLlXeFGu_vH8MH5vQ3v5kcdRmQ@cr4dev",
+						"shareKey": "ExEfTcn_TrrfzTMfqVmxdaFOUNCZztHUQEMGieMpcrKP-77qAJFXqMGGmCjpMcJBNQBHSJzSuEgNWoPzeTR53A~~"
+					}
+				},
+				{
+					"id": 1,
+					"name": "下次编译模拟更新",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "打卡",
+					"pathName": "pages/attendance/index",
+					"query": "scene=opengid%3Dladanmu5",
+					"scene": 1047
+				},
+				{
+					"id": 3,
+					"name": "宠物咨询页面",
+					"pathName": "pages/medicalAdvice/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "自诊页面",
+					"pathName": "pages/selfObd/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "会话页面",
+					"pathName": "pages/user/message/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "对话记录页面",
+					"pathName": "pages/communications/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "医生页面",
+					"pathName": "pages/medicalAdvice/medicalDoctor/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "话题列表页",
+					"pathName": "pages/flowTopic/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "结果页面",
+					"pathName": "pages/resultPage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "症状自诊",
+					"pathName": "pages/selfObd/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "症状详情",
+					"pathName": "pages/disease/index",
+					"query": "optionId=17&title=呕吐",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "加载患病结果详情",
+					"pathName": "pages/diseaseDetail/index",
+					"query": "id=454",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "宠物医疗医生页面",
+					"pathName": "pages/medicalAdvice/medicalDoctor/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "进入内容社区列表某条posts",
+					"pathName": "pages/topicsDetail/index",
+					"query": "id=1&topic=宠物晒蛋蛋大赛&like=7&comment=88&liked=true",
+					"scene": null
+				},
+				{
+					"id": 15,
+					"name": "授权页面",
+					"pathName": "pages/scope/index",
+					"query": "pages=topicsDetail",
+					"scene": null
+				},
+				{
+					"id": 16,
+					"name": "内容-评论页",
+					"pathName": "pages/topics/topicsDetail/flowComment/index",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": 17,
+					"name": "内容社区发布",
+					"pathName": "pages/topics/flowPublish/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "主子页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 19,
+					"name": "主子详情页",
+					"pathName": "pages/index/detail/index",
+					"query": "id=265&avatarUrl=https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJicBwVODCZtAictkTbzZzlakAuibu5WFEVWQBdIEtLaDyoDDIdVW3nVX0e6aTK2HdoSkjHUm3qRhOUw/132&nickName=Dead Person&page=index",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "发布",
+					"pathName": "pages/index/publish/index",
+					"query": "id=1&topic=宠物晒蛋蛋大赛&like=7&comment=88&liked=true",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 22,
+					"name": "家庭寄养列表",
+					"pathName": "pages/user/foster/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 23,
+					"name": "家庭寄养详情",
+					"pathName": "pages/user/foster/fosterDetail/index",
+					"query": "merchantId=1&goodsName=宠宝德家",
+					"scene": null
+				},
+				{
+					"id": 24,
+					"name": "下单",
+					"pathName": "pages/user/foster/fosterDetail/placeOrder/index",
+					"query": "goodsName=宠宝德家",
+					"scene": null
+				},
+				{
+					"id": 25,
+					"name": "寄养",
+					"pathName": "pages/user/foster/fosterDetail/index",
+					"query": "merchantId=1&goodsName=宠宝德家",
+					"scene": null
+				},
+				{
+					"id": 26,
+					"name": "订单详情",
+					"pathName": "pages/user/foster/fosterDetail/placeOrderDetail/index",
+					"query": "orderNo=11582450838684779154&orderId=69",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单列表",
+					"pathName": "pages/user/orderList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 28,
+					"name": "红包页",
+					"pathName": "pages/commons/redPacket/index",
+					"query": "nickName=比木白-Gary&totalAmount=30&redPackType=redPackType&avatar=https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ervmACqmpbWG3lGUyONEC3LoiarVOStafibOeUDGh122QNDtibM9BITFvf1xDoIicypYDYDk0EXZj1Qmg/132&time=2020-04-05 21:33:27",
+					"scene": 1048
+				},
+				{
+					"id": 29,
+					"name": "商品页",
+					"pathName": "pages/commons/detail/index",
+					"query": "id=500001",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择商品",
+					"pathName": "pages/user/message/communications/communicationsGoodsList/index",
+					"query": "merchantId=1&goodsName=宠宝德家",
+					"scene": null
+				},
+				{
+					"id": 31,
+					"name": "下单页面",
+					"pathName": "pages/commons/detail/order/index",
+					"query": "item=[{\"coverPic\":\"http://prod-pet.oss.1jtec.com/postcard/c4445918184630258_5.jpg\",\"goodsName\":\"渴望猫粮\",\"orderItem\":{\"goodsId\":500001,\"goodsNum\":2,\"skuId\":29,\"discPrice\":0.01,\"optionName\": \"鱼肉\"}}]",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收货地址页面",
+					"pathName": "pages/commons/detail/address/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 33,
+					"name": "订单详情",
+					"pathName": "pages/commons/detail/orderDetail/index",
+					"query": "orderId=153&orderNo=11585402491331779468",
+					"scene": null
+				},
+				{
+					"id": 34,
+					"name": "尚未支付的订单详情",
+					"pathName": "pages/commons/detail/orderDetail/index",
+					"query": "orderId=163&orderNo=11585478278479779114",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "6群打卡",
+					"pathName": "pages/attendance/index",
+					"query": "scene=opengid%3Dladanmu6",
+					"scene": null
+				},
+				{
+					"id": 36,
+					"name": "医生页面",
+					"pathName": "pages/medicalAdvice/medicalDoctor/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 37,
+					"name": "分享进入普通商品卡片",
+					"pathName": "pages/commons/detail/shareDetail/index",
+					"query": "id=1590736215619",
+					"scene": null
+				}
+			]
+		}
+	}
+}

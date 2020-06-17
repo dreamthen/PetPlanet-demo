@@ -1,0 +1,9 @@
+dist
+.temp/
+.rn_temp/
+.idea
+node_modules/
+package-lock.json
+yarn.lock
+yarn-error.log
+.DS_Store

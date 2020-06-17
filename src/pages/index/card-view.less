@@ -1,0 +1,239 @@
+@import '../../stylesheets/base/index';
+
+.pet-business {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+
+  @base-symbol-loading();
+
+  &-swiper {
+    width: 100%;
+    height: 144PX;
+    box-sizing: border-box;
+    padding: 18PX 17PX 12PX;
+    background-color: #fff;
+    border-radius: 4PX;
+
+    &-item {
+      border-radius: 4PX;
+    }
+
+    &-image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-container {
+    padding: 0 10PX;
+    box-sizing: border-box;
+  }
+
+  &-item {
+    margin-top: 10PX;
+
+    &:first-child {
+      margin-top: 0;
+
+      .pet-business-list {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &-list {
+    position: relative;
+    margin: 10PX 5PX 0;
+    padding: 0;
+    border: none;
+    border-radius: 8PX;
+
+    &-single {
+      margin: 0;
+      padding: 18PX 17PX 0;
+      border-radius: 0;
+    }
+
+    .at-card__header {
+      padding: 0;
+      border: none;
+
+      .at-card__header-title {
+        display: none;
+      }
+    }
+
+    .at-card__content {
+      padding: 0 0 24px;
+    }
+
+    &-title,
+    &-price,
+    &-user {
+      padding: 0 16px;
+
+      &-single {
+        padding: 0;
+      }
+    }
+
+    &-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 18PX;
+      font-weight: 500;
+      margin-top: 12PX;
+    }
+
+    &-result {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    &-subscript {
+      position: absolute;
+      top: 8px;
+      right: 5PX;
+      z-index: 3;
+    }
+
+    &-status {
+      position: relative;
+      color: #fff;
+      transform: rotate(45deg);
+      font-size: 10PX;
+      top: 9PX;
+      z-index: 4;
+    }
+
+    &-price {
+      font-size: 20PX;
+      font-weight: 500;
+      color: @base-main-color;
+      line-height: 48px;
+      margin-top: 11PX;
+
+      &-symbol {
+        font-size: 13PX;
+        margin-right: 4PX;
+      }
+
+      &-like {
+        float: right;
+        position: relative;
+        font-size: 13PX;
+        font-weight: 400;
+        color: @base-symbol-color;
+        height: 100%;
+        line-height: 48px;
+        margin-left: 24PX;
+        bottom: 3px;
+
+        &-single {
+          float: none;
+        }
+
+        &-count {
+          color: @base-symbol-important-color;
+        }
+      }
+    }
+
+    &-tags {
+      &-tagItem {
+        position: relative;
+        bottom: 3px;
+        margin-right: 8PX;
+        @base-card-list-tags();
+      }
+    }
+
+    &-user {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      color: #999;
+      margin-top: 13PX;
+      font-size: 24px;
+    }
+
+    &-userName {
+      width: 144PX;
+      white-space: pre-wrap;
+      word-break: break-all;
+      font-size: 12PX;
+      font-weight: 400;
+      color: @base-symbol-color;
+
+      &-single {
+        font-size: 15PX;
+      }
+    }
+
+    &-avatar {
+      width: 24PX;
+      height: 24PX;
+      line-height: 24PX;
+      margin-right: 6PX;
+
+      &-single {
+        width: 28PX;
+        height: 28PX;
+        line-height: 28PX;
+        margin-right: 10PX;
+      }
+    }
+
+    &-address {
+      display: flex;
+      align-items: center;
+      margin-top: 4PX;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      height: 36px;
+      line-height: 36px;
+      font-size: 13PX;
+      font-weight: 400;
+      color: @base-symbol-important-color;
+
+      &-single {
+        float: right;
+      }
+
+      image {
+        width: 11PX;
+        margin-right: 3PX;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: 215PX;
+      border-top-left-radius: 8PX;
+      border-top-right-radius: 8PX;
+
+      &-single {
+        border-radius: 8PX;
+      }
+    }
+  }
+
+  &-load-more {
+    height: 72px;
+    margin-bottom: 45px;
+
+    .at-button {
+      border: none;
+    }
+
+    .at-loading__ring {
+      border-color: @base-main-color transparent transparent transparent;
+    }
+  }
+}

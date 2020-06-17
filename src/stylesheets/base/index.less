@@ -1,0 +1,572 @@
+//公用部分
+@base-main-color: #F93B5F;
+@base-light-main-color: rgb(243, 207, 213);
+@base-symbol-redPacket-backgroundColor: rgb(225, 96, 76);
+@base-symbol-redPacket-color: #c6ae81;
+@base-symbol-color: #999;
+@base-symbol-important-color: #333;
+@base-symbol-tag-color: #666;
+@base-symbol-light-grey-color: #eee;
+@base-symbol-border-color: #F6F6F6;
+@base-symbol-shallow-color: #F9F9F9;
+@base-symbol-point-color: #FFA000;
+@base-symbol-point-light-color: rgb(252, 238, 226);
+@base-symbol-point-medical-color: rgb(255, 123, 0);
+@base-symbol-point-medical-light-color: rgb(255, 241, 230);
+@base-symbol-blue-color: #0A95FF;
+@base-symbol-light-blue-color: #EBF6FF;
+@base-symbol-point-backgroundColor: #FCF6E6;
+@base-symbol-backgroundColor: #fafafa;
+@base-symbol-inputNumber-backgroundColor: #dfe0e1;
+@base-symbol-inputNumber-color: #6a6b6c;
+@base-symbol-inputNumber-disabled-backgroundColor: #f1f2f3;
+@base-symbol-inputNumber-disabled-color: #e0e1e2;
+@base-symbol-modal-content-color: #ececec;
+@base-symbol-input-backgroundColor: #f7f7f7;
+
+//公用按钮(尺寸的宽度是手机宽度的一半)
+@base-symbol-half-button: {
+  background-color: @base-symbol-point-color;
+  border-color: @base-symbol-point-color;
+  width: 50%;
+}
+
+//公用规则或者介绍
+@base-symbol-description-point: {
+  content: '';
+  display: block;
+  width: 5PX;
+  height: 5PX;
+  background-color: @base-main-color;
+  border-radius: 50%;
+  margin-right: 6PX;
+  position: relative;
+  top: 6PX;
+}
+
+//公用下单、订单详情和订单列表商品信息
+@base-symbol-order-goodsInfo: {
+  display: flex;
+  align-items: flex-start;
+  height: 114PX;
+  box-sizing: border-box;
+
+  &-content {
+    width: calc(100% - 136PX);
+    height: 100%;
+    margin-left: 8PX;
+
+    &-title {
+      font-size: 16PX;
+      font-weight: 500;
+      color: @base-symbol-important-color;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+    }
+
+    &-desc {
+      font-size: 14PX;
+      color: @base-symbol-color;
+      background-color: @base-symbol-shallow-color;
+      margin-top: 8PX;
+      padding: 4PX;
+      border-radius: 4PX;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &-priceNum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8PX;
+    height: 100%;
+
+    &-discPrice {
+      font-size: 16PX;
+      color: @base-symbol-important-color;
+
+      &-float,
+      &-symbol {
+        font-size: 14PX;
+      }
+
+      &-symbol {
+        margin-right: 2PX;
+      }
+    }
+
+    &-num {
+      font-size: 14PX;
+      color: @base-symbol-color;
+    }
+  }
+
+  &-avatar {
+    width: 80PX;
+    height: 80PX;
+  }
+}
+
+//公用loading加载中样式......
+@base-symbol-loading: {
+  &-loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    .at-activity-indicator__body {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+//公用商品订单状态
+@base-symbol-orderStatus: {
+  &-status {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 18PX 17PX;
+    border: 1PX solid @base-symbol-border-color;
+
+    &-order {
+      font-size: 16PX;
+      font-weight: bolder;
+      color: @base-main-color;
+
+      &-desc {
+        color: @base-symbol-important-color;
+        font-weight: normal;
+      }
+    }
+
+    &-durationToEndTime {
+      font-size: 12PX;
+      color: @base-symbol-point-color;
+    }
+  }
+}
+
+//公用分享给好友
+@base-symbol-share: {
+  &-share {
+    margin-top: 24PX;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15PX;
+    font-weight: 400;
+    color: @base-symbol-important-color;
+
+    image {
+      margin-left: 12PX;
+      width: 28PX;
+      height: 28PX;
+    }
+
+    &-button {
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+      height: auto;
+
+      &.at-button {
+        border: none;
+
+        &__wxbutton {
+          &:after {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+//公用订单详情下的功能服务
+@base-symbol-serviceOrder: {
+  &-serviceOrder {
+    position: fixed;
+    width: 100%;
+    height: 46PX;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    box-shadow: 0 0 5PX #eee;
+
+    &-button {
+      border-radius: 0;
+      display: inline-block;
+      height: 46PX;
+      @base-symbol-half-button();
+    }
+
+    &-isFull {
+      width: 100%;
+    }
+
+    &-pendingPayment,
+    &-confirm {
+      background-color: @base-main-color;
+      border-color: @base-main-color;
+    }
+  }
+}
+
+//公用地址
+@base-symbol-address: {
+  &-userInfo {
+    width: 100%;
+    font-size: 16PX;
+    font-weight: 500;
+    color: @base-symbol-important-color;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &-name {
+      margin-right: 8PX;
+    }
+  }
+
+  &-addressInfo {
+    font-size: 14PX;
+    color: @base-symbol-tag-color;
+    margin-top: 2PX;
+  }
+}
+
+//公用订单信息
+@base-symbol-orderDetail-info: {
+  &-item {
+    font-size: 14PX;
+    color: @base-symbol-tag-color;
+    margin-top: 8PX;
+
+    &:first-child {
+      margin-top: 12PX;
+    }
+
+    &-title {
+      display: inline-block;
+      width: 60PX;
+      margin-right: 14PX;
+      text-align: right;
+    }
+
+    &-symbol {
+      font-size: 12PX;
+      margin-right: 2PX;
+    }
+
+    &-agreement {
+      color: @base-main-color;
+    }
+  }
+}
+
+//公用计数器
+@base-symbol-inputNumber: {
+  &.at-input-number {
+    border: none;
+    border-radius: 2PX !important;
+
+
+    .at-input-number {
+      &__input {
+        border: none;
+      }
+
+      &__btn {
+        padding: 18px 20px;
+        border-radius: 2PX;
+        @base-placeOrder-inputNumber-btn();
+
+        &-add,
+        &-subtract {
+          font-size: 24px;
+          line-height: 24px;
+          font-weight: bolder;
+        }
+      }
+
+      &--disabled {
+        @base-placeOrder-inputNumber-disabled-btn();
+      }
+    }
+  }
+}
+
+//公用模板弹窗
+@base-symbol-modal: {
+  .at-modal {
+    &__container {
+      width: 600px;
+      border-radius: 16px;
+    }
+
+    &__header {
+      font-weight: 700;
+      font-size: 17PX;
+      padding: 24PX 12PX 16PX;
+
+      &:after {
+        border: none;
+      }
+    }
+
+    &__content {
+      padding: 0 24PX;
+      font-size: 16PX;
+      min-height: 152px;
+      line-height: 1.4;
+      letter-spacing: 1px;
+      text-align: justify;
+      color: @base-symbol-tag-color;
+    }
+
+    &__footer {
+      .at-modal__action {
+        button {
+          color: @base-symbol-important-color;
+          font-size: 16PX;
+          font-weight: 700;
+
+          &:last-child {
+            color: @base-main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+//公用底部浮层弹窗
+@base-symbol-floatLayout: {
+  .at-float-layout {
+    &__container {
+      min-height: 300px;
+      border-top-left-radius: 8PX;
+      max-height: 1250px;
+      border-top-right-radius: 8PX;
+
+      .layout {
+        &-header {
+          background-color: #fff;
+          border-top-left-radius: 8PX;
+          border-top-right-radius: 8PX;
+          padding: 16PX 12PX 9PX;
+
+          &__title {
+            text-align: center;
+            padding: 0;
+            font-weight: 700;
+            font-size: 17PX;
+          }
+        }
+
+        &-body {
+          min-height: 160px;
+          padding: 4PX 24PX 32PX;
+          max-height: 1250px;
+
+          &__content {
+            min-height: 144px;
+            max-height: 1250px;
+            font-size: 16PX;
+            line-height: 1.4;
+            color: @base-symbol-tag-color;
+            text-align: justify;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  &-content {
+    padding-bottom: 40PX;
+  }
+
+  &-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .at-button {
+      width: 120PX;
+      height: 40PX;
+      line-height: 38PX;
+      margin: 0 8PX;
+      font-weight: 700;
+      font-size: 16PX;
+    }
+
+    &-cancel {
+      background-color: @base-symbol-border-color;
+      border: 1PX solid @base-symbol-border-color;
+      color: @base-symbol-important-color;
+    }
+
+    &-confirm {
+      background-color: @base-main-color;
+      border: 1PX solid @base-main-color;
+    }
+  }
+}
+
+//公用行为描述
+@base-desc-style: {
+  margin-top: 2PX;
+  font-size: 12PX;
+  font-weight: 400;
+  color: @base-symbol-point-color;
+}
+
+//主子头部筛选栏部分
+@base-preparation-border-style: {
+  position: absolute;
+  width: 50PX;
+  height: 8PX;
+  background: rgba(255, 232, 236, 1);
+  border-radius: 4PX;
+  top: 60%;
+  left: 50%;
+  margin-left: -25PX;
+};
+//主子列表领养标签部分
+@base-card-list-tags: {
+  width: 44PX;
+  height: 24PX;
+  line-height: 22PX;
+  background: @base-main-color;
+  border-radius: 4PX;
+  font-size: 14PX;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+//发现页内容社区列表部分
+@base-topics-tags: {
+  padding: 4PX 12PX;
+  font-size: 15PX;
+  font-weight: 400;
+  color: @base-main-color;
+  border-radius: 15PX;
+  background: #FFEEF1;
+}
+
+//发布页面部分
+@base-publish-button: {
+  font-size: 17PX;
+  font-weight: 400;
+  border-radius: 22PX;
+  background-color: @base-main-color;
+  border: none;
+}
+
+//咨询、下一步以及立即下单按钮
+@base-nextStep-button: {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: @base-main-color;
+  height: 94px;
+  line-height: 94px;
+  border-color: @base-main-color;
+  z-index: 2;
+}
+
+//家庭寄养详情部分
+@base-foster-detail-title: {
+  font-weight: bolder;
+  font-size: 18PX;
+}
+
+//家庭寄养立即下单部分
+@base-foster-placeOrder-title: {
+  color: @base-symbol-important-color;
+  font-size: 16PX;
+}
+
+@base-foster-placeOrder-service: {
+  margin-top: 16PX;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14PX;
+  color: @base-symbol-tag-color;
+}
+
+@base-placeOrder-inputNumber-btn: {
+  background-color: @base-symbol-inputNumber-backgroundColor;
+  color: @base-symbol-inputNumber-color;
+}
+
+@base-placeOrder-inputNumber-disabled-btn: {
+  background-color: @base-symbol-inputNumber-disabled-backgroundColor;
+  color: @base-symbol-inputNumber-disabled-color;
+}
+
+//普通商品下单部分
+@base-order-info: {
+  background-color: #fff;
+  padding: 0 17PX 17PX;
+  display: flex;
+  align-items: center;
+
+  &-title {
+    width: 92PX;
+    text-align: right;
+    color: @base-symbol-important-color;
+  }
+
+  &-content {
+    width: calc(100% - 108PX);
+  }
+}
+
+//打卡页面拆封红包部分
+@base-redPacket-area: {
+  margin-top: 24PX;
+  text-align: center;
+  font-size: 22PX;
+  font-weight: bolder;
+  color: @base-symbol-important-color;
+}
+
+@base-redPacket-desc: {
+  margin-top: 12PX;
+  font-size: 14PX;
+  font-weight: normal;
+  color: @base-symbol-color;
+}
+
+@base-redPacket-totalPrice: {
+  font-size: 60PX;
+  color: @base-symbol-redPacket-color;
+  display: flex;
+  justify-content: center;
+  line-height: .7;
+  align-items: flex-end;
+  margin-top: 40PX;
+}
+
+@base-redPacket-totalPrice-symbol: {
+  font-size: 14PX;
+  margin-left: 4PX;
+  font-weight: normal;
+}
+
+@base-redPacket-noReceive-color: #888;

@@ -1,0 +1,54 @@
+@import '../../../stylesheets/base/index';
+
+.goods {
+  padding: 8PX 12PX;
+  display: flex;
+  align-items: center;
+  border-radius: 8PX;
+  background-color: @base-symbol-shallow-color;
+
+  &-title {
+    width: calc(100% - 72PX);
+    padding-left: 13PX;
+    font-size: 14PX;
+    font-weight: 500;
+    color: @base-symbol-important-color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-price {
+    color: @base-main-color;
+    display: flex;
+    align-items: center;
+    margin-top: 2PX;
+    font-size: 12PX;
+
+    &-disc {
+      &-symbol {
+        font-size: 10PX;
+        margin-right: 2PX;
+      }
+    }
+
+    &-real {
+      font-size: 10PX;
+      color: @base-symbol-color;
+      margin-left: 12PX;
+      text-decoration: line-through;
+    }
+  }
+
+  &-go {
+    width: 8PX;
+    margin-left: 4PX;
+    transform: rotate(180deg);
+  }
+
+  &-avatar {
+    width: 40PX;
+    height: 40PX;
+    border-radius: 4PX;
+  }
+}

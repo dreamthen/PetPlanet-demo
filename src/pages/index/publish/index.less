@@ -1,0 +1,214 @@
+@import '../../../stylesheets/base/index';
+
+page {
+  height: 100%;
+
+  .pet-business {
+
+    @base-symbol-loading();
+
+    &-publish {
+      .at-float-layout__container {
+        min-height: auto;
+        max-height: initial;
+        height: 100%;
+
+        .layout-header {
+          text-align: center;
+          background-color: #fff;
+          border-bottom: 1px solid #eee;
+
+          &__title {
+            padding: 0;
+          }
+
+          &__icon {
+            left: 18px;
+            right: inherit;
+          }
+        }
+
+        .layout-body {
+          min-height: auto;
+          max-height: initial;
+          height: calc(100% - 80px);
+          padding: 0;
+
+          &__content {
+            min-height: auto;
+            max-height: initial;
+            height: 100%;
+          }
+        }
+      }
+
+      &-content {
+        background-color: #f1f1f1;
+
+        &-top {
+          padding-bottom: 10PX;
+        }
+
+        &-description {
+          border: none;
+          padding: 17PX;
+        }
+
+        &-images {
+          background-color: #fff;
+          padding: 0 12PX;
+
+          .at-image-picker {
+            &__flex-item {
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+
+            &__choose-btn {
+              border: none;
+              background-color: #f3f4f8;
+
+              text.at-icon.at-icon-add {
+                font-size: 26px !important;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+
+                &:before {
+                  font-size: 22px;
+                  position: relative;
+                  border-radius: 50%;
+                  border: 2px solid #ccc;
+                  padding: 12px;
+                  background-color: #fefeff;
+                  right: 2px;
+                }
+
+                &:after {
+                  font-size: 25px;
+                  display: block;
+                  content: '照片';
+                  margin-top: 12px;
+                }
+              }
+            }
+          }
+        }
+
+        &-position {
+          padding: 13PX 17PX 17PX;
+          background-color: #fff;
+
+          .at-list {
+            &__item {
+              display: inline-block;
+              background: #F4F4F4;
+              border-radius: 16PX;
+              box-sizing: border-box;
+              padding: 4PX 8PX;
+
+              &-icon {
+                margin-right: 10px;
+              }
+
+              &-container {
+                position: relative;
+                top: 1px;
+              }
+
+              .item-content {
+                &__info {
+                  font-size: 13PX;
+                  font-weight: 400;
+                  color: @base-symbol-important-color;
+                }
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          .at-input {
+            margin-bottom: 0;
+            margin-left: 0;
+          }
+        }
+
+        &-input,
+        &-button,
+        &-tag {
+          padding: 17PX;
+          background-color: #fff;
+          box-sizing: border-box;
+
+          .at-button--primary {
+            @base-publish-button();
+          }
+        }
+
+        &-button {
+          padding-top: 20PX;
+        }
+
+        &-title {
+          margin-left: 0;
+
+          &:after {
+            border: 1PX solid @base-symbol-border-color;
+          }
+        }
+
+        &-price {
+          .at-input__title {
+            margin-right: 26px;
+            width: 132px;
+          }
+
+          &:after {
+            border: 1PX solid @base-symbol-border-color;
+          }
+        }
+
+        &-contactInfo {
+          .at-input__title {
+            margin-right: 26px;
+            width: 132px;
+          }
+
+          &:after {
+            border: 1PX solid @base-symbol-border-color;
+          }
+        }
+
+        &-tag {
+          line-height: 50px;
+          border-bottom: 1PX solid @base-symbol-border-color;
+
+          &-adoption {
+            &-title {
+              font-size: 32px;
+              margin: 4px 44px 0 0;
+            }
+
+            &-tagAdoption {
+              height: 52px;
+              line-height: 50px;
+              padding: 0 8PX;
+              font-size: 14PX;
+              font-weight: 400;
+              color: @base-symbol-tag-color;
+
+              &.at-tag--active {
+                border-color: #fb2a5d;
+                background-color: #fb2a5d;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

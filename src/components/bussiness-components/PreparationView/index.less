@@ -1,0 +1,46 @@
+@import '../../../stylesheets/base/index';
+
+.preparation {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  //width: 100%;
+  height: 60PX;
+  line-height: 60PX;
+  background-color: #fff;
+  //top: 0;
+  //left: 0;
+  //z-index: 50;
+
+  &-item {
+    margin-left: 30PX;
+    height: inherit;
+    font-size: 17PX;
+    color: @base-symbol-tag-color;
+    text-align: center;
+
+    &:first-child {
+      margin-left: 33PX;
+    }
+
+    &-selected {
+      position: relative;
+      font-size: 22PX;
+      color: @base-main-color;
+      font-weight: bolder;
+
+      &-text {
+        position: relative;
+        z-index: 2;
+      }
+
+      &-border {
+        @base-preparation-border-style();
+        z-index: 1;
+      }
+    }
+  }
+}
