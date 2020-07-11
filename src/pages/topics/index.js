@@ -1,18 +1,15 @@
-import Taro, {Component} from '@tarojs/taro';
-import {connect} from '@tarojs/redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {
   Text,
-  ScrollView,
   View
 } from '@tarojs/components';
 
 
 @connect((state) => {
-  return {
-  }
+  return {}
 }, (dispatch) => {
-  return {
-  }
+  return {}
 })
 class Topic extends Component {
 
@@ -20,21 +17,18 @@ class Topic extends Component {
     super(props);
   }
 
-  static options = {
-    addGlobalClass: true
-  };
-
-  config = {
-    navigationBarTitleText: '发现'
-  };
-
-  state = {
-  };
+  state = {};
 
   render() {
     return (
-      <View className='pet'>
-        hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~hello world~~~
+      <View>
+        我叫尹文楷
+        <Text decode>
+          1111\n
+        </Text>
+        <Text decode>
+          2222\n
+        </Text>
       </View>
     )
   }
